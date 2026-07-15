@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>睡眠训练第 1 天：欢迎加入睡眠训练</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --paper: #ffffff;
+    --text: #202122;
+    --muted: #54595d;
+    --border: #a2a9b1;
+    --link: #36c;
+    --accent: #3366cc;
+    --note: #eef3f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.75;
+  }
+  .layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px 22px 56px;
+  }
+  aside {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    background: var(--paper);
+    border: 1px solid #c8ccd1;
+    padding: 18px 18px 16px;
+    font-size: 14px;
+  }
+  aside h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 8px;
+  }
+  aside a {
+    display: block;
+    color: var(--link);
+    text-decoration: none;
+    padding: 4px 0;
+  }
+  aside a:hover { text-decoration: underline; }
+  main {
+    background: var(--paper);
+    border: 1px solid #c8ccd1;
+    padding: 34px 44px 46px;
+    min-width: 0;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 4px;
+    margin-top: 34px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-top: 26px;
+  }
+  a { color: var(--link); }
+  .lead {
+    font-size: 18px;
+  }
+  .promise {
+    background: var(--note);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin: 20px 0;
+  }
+  .promise ol { margin: 0; padding-left: 24px; }
+  .task {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .task strong { display: block; font-size: 18px; margin-bottom: 8px; }
+  .disclaimer {
+    color: var(--muted);
+    font-size: 14px;
+    background: #f8f9fa;
+    border: 1px solid #c8ccd1;
+    padding: 16px 18px;
+    margin-top: 28px;
+  }
+
+  .submit-button {
+    display: inline-block;
+    background: #3366cc;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+  }
+  .submit-button:hover {
+    background: #2a4fa3;
+    text-decoration: none;
+  }
+  .footer {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #eaecf0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  code {
+    background: #f8f9fa;
+    border: 1px solid #eaecf0;
+    padding: 1px 4px;
+  }
+  @media (max-width: 820px) {
+    .layout { grid-template-columns: 1fr; padding: 0; }
+    aside { position: static; border-left: 0; border-right: 0; }
+    main { border-left: 0; border-right: 0; padding: 26px 22px 40px; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <h2>目录</h2>
+    <a href="#overview">概述</a>
+    <a href="#three-things">开始前的三件事</a>
+    <a href="#participation">如何参与训练</a>
+    <a href="#ps">每封邮件的附言</a>
+    <a href="#inbox">确保收到邮件</a>
+    <a href="#task">第 1 天任务</a>
+    <a href="#next">接下来</a>
+    <a href="#disclaimer">免责声明</a>
+  </aside>
+
+  <main>
+    <h1>睡眠训练第 1 天：欢迎加入睡眠训练</h1>
+    <div class="subtitle">本文译自 Insomnia Coach 的睡眠训练邮件《[ST] Day 1: Welcome to the sleep training, Juan》，作者为 Martin Reed，原邮件日期为 2026 年 7 月 13 日。</div>
+
+
+    <section id="overview">
+      <h2>概述</h2>
+      <p class="lead">
+        欢迎加入睡眠训练。我理解失眠带来的痛苦，也希望通过每日邮件和配套任务，帮助你一步步摆脱与失眠的抗争。
+      </p>
+    </section>
+
+    <section id="three-things">
+      <h2>开始前的三件事</h2>
+      <div class="promise">
+        <ol>
+          <li>你有能力睡着。</li>
+          <li>你并不孤单。</li>
+          <li>你可以从失眠手中重新夺回自己的生活。</li>
+        </ol>
+      </div>
+      <p>
+        我知道，失眠现在对你来说是一个非常真实的问题。我理解这种挣扎，也想帮助你。从现在开始，你不必再独自面对，我会支持你。
+      </p>
+      <p>
+        只要你认真阅读我之后发来的邮件，并完成我在每封邮件中安排的任务，你就会开始逐步远离失眠带来的困扰。
+      </p>
+    </section>
+
+    <section id="participation">
+      <h2>如何参与训练</h2>
+      <h3>不要只快速浏览邮件</h3>
+      <p>
+        每天只是匆匆浏览一封邮件，不太可能真正改善你的睡眠。因此，我会在每封邮件末尾安排一个任务。
+      </p>
+      <p>
+        这些任务并不是强制的，但如果你真的想取得进展，我强烈建议你认真完成每一项任务。真正的改变需要你的主动参与和实际行动。
+      </p>
+    </section>
+
+    <section id="ps">
+      <h2>每封邮件都会有“附言（PS）”</h2>
+      <p>
+        我会在每封邮件结尾加入一个“PS”部分，通常放一些额外材料或补充资源。请尽量把每封邮件读到最后，以免错过这些内容。
+      </p>
+    </section>
+
+    <section id="inbox">
+      <h2>确保收到训练邮件</h2>
+      <p>
+        为了确保你能收到我发来的邮件，请将 <code>martin@insomniacoach.com</code> 添加到联系人、安全发件人名单或白名单中。
+      </p>
+      <p>我发送的所有睡眠训练邮件，主题都会采用以下格式：</p>
+      <p><code>[ST] Day X: _____________________</code></p>
+      <p>当邮件到达收件箱时，请依次完成：</p>
+      <ol>
+        <li>打开邮件；</li>
+        <li>认真阅读；</li>
+        <li>完成当天的任务。</li>
+      </ol>
+      <p>
+        我希望帮助你，但只有当你愿意和我一起配合并采取行动时，这些内容才会真正发挥作用。
+      </p>
+    </section>
+
+    <section id="task">
+      <h2>第 1 天任务</h2>
+      <div class="task">
+        <strong>请回答以下问题：</strong>
+        你目前在睡眠方面遇到了哪些困难？在改善睡眠时，你面临的最大挑战是什么？
+      </div>
+      <p>
+        <a class="submit-button"
+           href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzgzOTc3NzQ5LCJuYmYiOjE3ODM5Nzc3NDksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJhYW5xY3N2cWkybnA2amJuNTFrMSIsInRva2VuIjoiYWFucWNzdnFpMm5wNmpibjUxazEiLCJzZW5kX2F0IjoxNzgzOTc3NzQ4LCJlbWFpbF9pZCI6NTM1ODQwNywiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2luc29tbmlhY29hY2guY29tLzczamQ4MnVkaGUtMS8_ZW1haWw9bWVsb24wNDAxJTQwb3V0bG9vay5jb20mX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.9XawgjGFDtLA416NZoOdZs13zA79chYwXkKvnx3EMkI"
+           target="_blank"
+           rel="noopener noreferrer">
+          点击这里提交答案
+        </a>
+      </p>
+    </section>
+
+    <section id="next">
+      <h2>接下来</h2>
+      <p>
+        正式的训练内容将在第二天继续。
+      </p>
+      <p>
+        如果你已经准备好提前开始，也可以参加我的六周在线睡眠辅导课程，系统地练习如何摆脱失眠带来的困扰，重新过上你想要的生活。
+      </p>
+      <p>
+        Martin “Let's Get Started” Reed，MEd、NBC-HWC、CCSH、CHES®
+      </p>
+    </section>
+
+    <section id="disclaimer">
+      <h2>免责声明</h2>
+      <div class="disclaimer">
+        本邮件内容仅用于信息和教育目的，不构成医疗建议，也不用于诊断、治疗、治愈或预防任何疾病、障碍或医学状况。邮件内容不能替代医生或其他持证医疗专业人员提供的建议。Insomnia Coach LLC 仅提供辅导服务，不提供心理治疗、咨询、医疗建议或医疗治疗。所有内容均按“现状”提供，不附带任何明示或暗示的保证。
+      </div>
+      <p>
+        通讯地址：Martin Reed, PO Box 488, Cottage Grove, OR 97424。
+      </p>
+    </section>
+
+    <div class="footer">
+      本页面根据用户提供的英文 PDF 翻译并整理为中文 Wiki 风格页面。为提高可读性，部分重复的邮件营销文字做了轻微整合，但保留了原意与核心信息。
+    </div>
+  </main>
+</div>
+</body>
+</html>
