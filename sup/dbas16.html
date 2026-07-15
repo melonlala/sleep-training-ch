@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>睡眠功能失调信念与态度量表（DBAS-16）</title>
+<style>
+  :root {
+    --bg:#f8f9fa; --paper:#fff; --text:#202122; --muted:#54595d;
+    --border:#c8ccd1; --link:#36c; --accent:#3366cc; --warn:#fff4ce;
+    --good:#eef7ea;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+      "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+    line-height:1.7;
+  }
+  main {
+    max-width:980px; margin:28px auto; background:var(--paper);
+    border:1px solid var(--border); padding:32px 36px 46px;
+  }
+  h1 {
+    font-family:Georgia,"Times New Roman","Songti SC",serif;
+    font-weight:500; font-size:32px; line-height:1.25;
+    border-bottom:1px solid #a2a9b1; padding-bottom:10px; margin:0 0 8px;
+  }
+  h2 {
+    font-family:Georgia,"Times New Roman","Songti SC",serif;
+    font-weight:500; font-size:23px;
+    border-bottom:1px solid #a2a9b1; padding-bottom:4px; margin-top:32px;
+  }
+  a { color:var(--link); }
+  .subtitle,.small { color:var(--muted); font-size:14px; }
+  .intro,.result {
+    background:#eef3f8; border-left:4px solid var(--accent);
+    padding:14px 18px; margin:20px 0;
+  }
+  .item {
+    border:1px solid var(--border); border-radius:6px;
+    padding:16px 18px; margin:14px 0;
+  }
+  .item.flagged { background:var(--warn); border-color:#d6b656; }
+  .q {
+    font-weight:600; margin-bottom:12px;
+  }
+  .scale {
+    display:grid; grid-template-columns:repeat(11,minmax(34px,1fr));
+    gap:6px;
+  }
+  .scale label {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    border:1px solid var(--border); border-radius:4px; padding:7px 2px;
+    cursor:pointer; min-height:50px;
+  }
+  .scale input { margin:0 0 3px; }
+  .anchors {
+    display:flex; justify-content:space-between; color:var(--muted);
+    font-size:13px; margin:5px 2px 0;
+  }
+  .actions {
+    display:flex; gap:12px; flex-wrap:wrap; margin:24px 0;
+  }
+  button {
+    border:0; border-radius:6px; padding:11px 18px;
+    font-size:16px; cursor:pointer;
+  }
+  .primary { background:var(--accent); color:#fff; }
+  .secondary { background:#eaecf0; color:var(--text); }
+  .result { display:none; }
+  .result.show { display:block; }
+  .score {
+    font-size:32px; font-weight:700; margin:4px 0 8px;
+  }
+  .target-list {
+    margin-top:10px; padding-left:22px;
+  }
+  .notice {
+    background:#f8f9fa; border:1px solid var(--border);
+    padding:14px 16px; color:var(--muted); font-size:14px;
+  }
+  @media (max-width:720px) {
+    main { margin:0; border-left:0; border-right:0; padding:24px 16px 38px; }
+    h1 { font-size:27px; }
+    .scale { grid-template-columns:repeat(6,1fr); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p style="margin:0 0 18px"><a href="../day3.html">← 返回第 3 天</a></p>
+
+  <h1>睡眠功能失调信念与态度量表（DBAS-16）</h1>
+  <div class="subtitle">
+    中文翻译与自动计分版。原量表：Dysfunctional Beliefs and Attitudes About Sleep, 16-item version。
+  </div>
+
+  <div class="intro">
+    请根据你自己的真实体验，对每一条陈述选择 0–10 分。<br>
+    <strong>0 = 完全不同意，10 = 完全同意。</strong><br>
+    没有正确或错误答案，请考虑整条连续量尺，而不只是两个极端。
+  </div>
+
+  <form id="dbasForm">
+    <div id="items"></div>
+
+    <div class="actions">
+      <button type="button" class="primary" onclick="calculateScore()">计算结果</button>
+      <button type="button" class="secondary" onclick="resetForm()">清空重填</button>
+    </div>
+  </form>
+
+  <section id="result" class="result" aria-live="polite">
+    <h2 style="margin-top:0">评估结果</h2>
+    <div>已完成题目：<strong id="completed">0</strong> / 16</div>
+    <div class="score"><span id="average">—</span> / 10</div>
+    <p id="summary"></p>
+    <div id="targetsBlock" style="display:none">
+      <strong>建议重点留意的条目（得分 &gt; 5）：</strong>
+      <ol id="targets" class="target-list"></ol>
+    </div>
+  </section>
+
+  <h2>计分说明</h2>
+  <p>
+    将所有已完成条目的分数相加，再除以已完成条目数，得到平均分。
+    分数越高，代表与睡眠有关的功能失调信念越明显。原量表建议重点处理得分
+    <strong>大于 5 分</strong>的条目。
+  </p>
+
+  <div class="notice">
+    本工具用于教育和自我反思，不用于诊断失眠或任何医疗、心理状况。
+    原量表说明并未提供统一的诊断阈值，因此本页面不会把分数自动解释为“轻度、中度或重度”。
+    若睡眠问题长期影响生活，请咨询医生或具备资质的睡眠专业人员。
+  </div>
+
+  <p class="small" style="margin-top:24px">
+    参考：Morin CM, Vallières A, Ivers H. Dysfunctional Beliefs and Attitudes about Sleep (DBAS):
+    Validation of a Brief Version (DBAS-16). <em>SLEEP</em>. 2007;30(11):1547–1554.
+  </p>
+</main>
+
+<script>
+const questions = [
+  "我需要睡满 8 小时，才能感到精神恢复，并在白天正常发挥。",
+  "如果某一晚没有获得足够的睡眠，我第二天就需要通过午睡补回来，或者下一晚睡得更久。",
+  "我担心长期失眠会对身体健康造成严重后果。",
+  "我担心自己会失去控制睡眠的能力。",
+  "如果前一晚睡得不好，我知道这一定会影响第二天的日常活动。",
+  "为了白天保持清醒并正常发挥，与其经历一个糟糕的夜晚，我还不如服用安眠药。",
+  "当我白天感到烦躁、情绪低落或焦虑时，主要是因为前一晚没睡好。",
+  "如果某一晚睡得不好，我知道这会打乱我整整一周的睡眠安排。",
+  "如果一晚没有获得足够睡眠，我第二天几乎无法正常运作。",
+  "我永远无法预测自己今晚会睡得好还是不好。",
+  "对于睡眠受到干扰所带来的负面后果，我几乎没有能力应对。",
+  "当我白天感到疲倦、没有精力，或似乎无法正常发挥时，通常是因为前一晚没睡好。",
+  "我认为失眠本质上是由化学物质失衡造成的。",
+  "我觉得失眠正在破坏我享受生活的能力，并阻止我做自己想做的事。",
+  "药物可能是解决失眠的唯一办法。",
+  "在睡得不好之后，我会回避或取消原本应尽的责任或安排，包括社交、家庭或工作事务。"
+];
+
+const container = document.getElementById("items");
+
+questions.forEach((q, i) => {
+  const item = document.createElement("div");
+  item.className = "item";
+  item.id = `item-${i+1}`;
+
+  const title = document.createElement("div");
+  title.className = "q";
+  title.textContent = `${i+1}. ${q}`;
+  item.appendChild(title);
+
+  const scale = document.createElement("div");
+  scale.className = "scale";
+
+  for (let v = 0; v <= 10; v++) {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = `q${i+1}`;
+    input.value = v;
+    input.setAttribute("aria-label", `第${i+1}题，${v}分`);
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(v));
+    scale.appendChild(label);
+  }
+  item.appendChild(scale);
+
+  const anchors = document.createElement("div");
+  anchors.className = "anchors";
+  anchors.innerHTML = "<span>完全不同意</span><span>完全同意</span>";
+  item.appendChild(anchors);
+
+  container.appendChild(item);
+});
+
+function calculateScore() {
+  let total = 0;
+  let completed = 0;
+  const targets = [];
+
+  questions.forEach((q, i) => {
+    const checked = document.querySelector(`input[name="q${i+1}"]:checked`);
+    const item = document.getElementById(`item-${i+1}`);
+    item.classList.remove("flagged");
+
+    if (checked) {
+      const value = Number(checked.value);
+      total += value;
+      completed += 1;
+      if (value > 5) {
+        targets.push({index:i+1, text:q, value});
+        item.classList.add("flagged");
+      }
+    }
+  });
+
+  const result = document.getElementById("result");
+  result.classList.add("show");
+  document.getElementById("completed").textContent = completed;
+
+  if (completed === 0) {
+    document.getElementById("average").textContent = "—";
+    document.getElementById("summary").textContent = "请至少完成一题后再计算。";
+    document.getElementById("targetsBlock").style.display = "none";
+    result.scrollIntoView({behavior:"smooth"});
+    return;
+  }
+
+  const avg = total / completed;
+  document.getElementById("average").textContent = avg.toFixed(2);
+
+  const summary = completed === 16
+    ? "这是 16 个条目的完整平均分。分数越高，表示功能失调型睡眠信念越明显。"
+    : `这是基于已完成 ${completed} 题计算的临时平均分。完成全部 16 题后结果更完整。`;
+  document.getElementById("summary").textContent = summary;
+
+  const list = document.getElementById("targets");
+  list.innerHTML = "";
+  targets.forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = `第 ${t.index} 题（${t.value} 分）：${t.text}`;
+    list.appendChild(li);
+  });
+
+  document.getElementById("targetsBlock").style.display =
+    targets.length ? "block" : "none";
+
+  result.scrollIntoView({behavior:"smooth"});
+}
+
+function resetForm() {
+  document.getElementById("dbasForm").reset();
+  document.querySelectorAll(".item").forEach(x => x.classList.remove("flagged"));
+  document.getElementById("result").classList.remove("show");
+  document.getElementById("targets").innerHTML = "";
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+</script>
+</body>
+</html>
