@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>睡眠训练第 3 天：你为什么会失眠</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --paper: #ffffff;
+    --text: #202122;
+    --muted: #54595d;
+    --border: #a2a9b1;
+    --link: #36c;
+    --accent: #3366cc;
+    --note: #eef3f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.75;
+  }
+  .layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px 22px 56px;
+  }
+  aside {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    background: var(--paper);
+    border: 1px solid #c8ccd1;
+    padding: 18px 18px 16px;
+    font-size: 14px;
+  }
+  aside h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 8px;
+  }
+  aside a {
+    display: block;
+    color: var(--link);
+    text-decoration: none;
+    padding: 4px 0;
+  }
+  aside a:hover { text-decoration: underline; }
+  main {
+    background: var(--paper);
+    border: 1px solid #c8ccd1;
+    padding: 34px 44px 46px;
+    min-width: 0;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 4px;
+    margin-top: 34px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-top: 26px;
+  }
+  a { color: var(--link); }
+  .lead { font-size: 18px; }
+  .framework {
+    background: var(--note);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin: 20px 0;
+  }
+  .takeaway {
+    background: #f0f7ed;
+    border: 1px solid #9fbd8f;
+    padding: 16px 18px;
+    margin: 22px 0;
+  }
+  .task {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .task strong { display: block; font-size: 18px; margin-bottom: 8px; }
+  .submit-button {
+    display: inline-block;
+    background: #3366cc;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+  }
+  .submit-button:hover {
+    background: #2a4fa3;
+    text-decoration: none;
+  }
+  .resource-list li { margin-bottom: 18px; }
+  .disclaimer {
+    color: var(--muted);
+    font-size: 14px;
+    background: #f8f9fa;
+    border: 1px solid #c8ccd1;
+    padding: 16px 18px;
+    margin-top: 28px;
+  }
+  .footer {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #eaecf0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  @media (max-width: 820px) {
+    .layout { grid-template-columns: 1fr; padding: 0; }
+    aside { position: static; border-left: 0; border-right: 0; }
+    main { border-left: 0; border-right: 0; padding: 26px 22px 40px; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <h2>目录</h2>
+    <a href="#overview">概述</a>
+    <a href="#three-factors">影响失眠的三类因素</a>
+    <a href="#predisposing">易感因素</a>
+    <a href="#precipitating">诱发因素</a>
+    <a href="#perpetuating">维持因素</a>
+    <a href="#takeaway">今天的重点</a>
+    <a href="#task">第 3 天任务</a>
+    <a href="#resources">更多帮助与资源</a>
+    <a href="#disclaimer">免责声明</a>
+  </aside>
+
+  <main>
+    <p style="margin:0 0 18px;">
+      <a href="index.html">← 返回睡眠训练目录</a>
+    </p>
+
+    <h1>睡眠训练第 3 天：你为什么会失眠</h1>
+    <div class="subtitle">
+      本文译自 Insomnia Coach 的睡眠训练邮件《[ST] Day 3: The reason(s) why you have insomnia》，作者为 Martin Reed，原邮件日期为 2026 年 7 月 15 日。
+    </div>
+
+    <section id="overview">
+      <h2>概述</h2>
+      <p class="lead">
+        还记得昨天我提到的三个睡眠调节机制吗？它们分别是睡眠—觉醒周期、睡眠压力，以及唤醒系统。与此类似，失眠也通常受到三类因素影响。
+      </p>
+    </section>
+
+    <section id="three-factors">
+      <h2>影响失眠的三类因素</h2>
+      <div class="framework">
+        <ol>
+          <li>易感因素（Predisposing factors）；</li>
+          <li>诱发因素（Precipitating factors）；</li>
+          <li>维持因素（Perpetuating factors）。</li>
+        </ol>
+      </div>
+      <p>
+        今天我会逐一解释这三类因素。你可能会发现，它们与你自己和失眠抗争的经历非常相关。
+      </p>
+    </section>
+
+    <section id="predisposing">
+      <h2>易感因素</h2>
+      <p>
+        有些人确实比其他人更容易出现失眠。你可能比别人更容易担忧或反复琢磨事情；你的唤醒系统可能更加敏感；你可能有失眠家族史、某种健康问题，或从事压力较大的工作。
+      </p>
+      <p>
+        这些因素通常不会单独引发失眠，但会让你更容易经历难熬的夜晚。
+      </p>
+    </section>
+
+    <section id="precipitating">
+      <h2>诱发因素</h2>
+      <p>
+        诱发因素是失眠最初的触发事件。压力、工作变化、健康方面的惊吓，以及其他重大变化或异常事件，都可能激活唤醒系统，使睡眠变得困难。
+      </p>
+      <p>
+        睡眠因为这些事件而受到干扰是完全正常的。对很多人来说，当最初的触发因素过去后，睡眠也会自然恢复。但对另一些人来说，睡眠并不会恢复。
+      </p>
+      <p>
+        为什么？通常是因为接下来出现了维持因素。
+      </p>
+    </section>
+
+    <section id="perpetuating">
+      <h2>维持因素</h2>
+      <p>
+        维持因素，是我们为了改善睡眠或弥补睡眠不足而采取的一些可以理解的做法，但这些做法反而可能让问题变得更严重。
+      </p>
+      <p>常见例子包括：</p>
+      <ul>
+        <li>还没有困意时，就为了“多睡一点”而提前上床；</li>
+        <li>为了多睡一点，比平时更晚起床；</li>
+        <li>白天补觉，试图把失去的睡眠补回来；</li>
+        <li>因为前一晚没睡好而请假，或取消和朋友的计划。</li>
+      </ul>
+      <p>
+        这些做法会增加你躺在床上翻来覆去、担心睡眠的时间，从而进一步激活唤醒系统，让失眠变得更严重。
+      </p>
+      <p>
+        另外，当我们为了迁就睡眠而不断改变生活，例如取消计划、留在家里，我们实际上只会让失眠带来更多负面结果，也让它在生活中获得更大的权力和影响。这又会进一步增加与睡眠有关的担忧和焦虑。
+      </p>
+      <p>
+        即使你没有在上述例子里看到自己，也不代表你是特殊或罕见的情况。
+      </p>
+      <p>
+        真正的共同主题，是我们开始对睡眠“用力”：试图逼它发生，试图保护它，试图消除清醒，要求自己必须入睡或重新入睡，或者试图对抗、回避那些伴随失眠而来的困难想法和感受。所有这些努力，都可能让失眠持续下去。
+      </p>
+    </section>
+
+    <section id="takeaway">
+      <h2>今天的重点</h2>
+      <div class="takeaway">
+        睡眠受到干扰是正常的，每个人都会经历。真正影响睡眠能否恢复的，往往是我们如何回应最初的睡眠中断。我们的反应会决定睡眠逐渐恢复，还是随着时间继续恶化。
+      </div>
+    </section>
+
+    <section id="task">
+      <h2>第 3 天任务</h2>
+      <div class="task">
+        <strong>请回答以下问题：</strong>
+        你的睡眠目标是什么？如果这些目标实现了，你会有什么感受？
+      </div>
+      <p>
+        <a class="submit-button"
+           href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2luc29tbmlhY29hY2guY29tLzM5ZGtzaGVsZGktMy8_ZW1haWw9bWVsb24wNDAxJTQwb3V0bG9vay5jb20mX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.TmMcwj57Tgprlu8B8gExikhr8m18C7HGuISgglrA_9c"
+           target="_blank"
+           rel="noopener noreferrer">
+          点击这里提交答案
+        </a>
+      </p>
+      <p>
+        明天，我们会讨论围绕睡眠的最大误区，以及它为什么可能至少部分导致了你与失眠之间的长期抗争。
+      </p>
+    </section>
+
+    <section id="resources">
+      <h2>更多帮助与资源</h2>
+      <p>
+        Martin “Goal-Oriented” Reed，
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56VTFPVEEyTmpnMExDSnVZbVlpT2pFM05UVTVNRFkyT0RRc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqWTNOakV3TmpreU1TSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwyRmliM1YwTHlOdFpXUWlmUS5vb0ZSSnl6MldqMF9SbWsxYTYtQkNPSkduZkxsWnIwTktQVE9TTUpya01FP2U9bWVsb24wNDAxJTQwb3V0bG9vay5jb20mX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.4k88VLE5_dWG9Yuv7d9DWsb0t_XAmgJHiV_6fJOboYc" target="_blank" rel="noopener noreferrer">MEd</a>、
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56VTFPVEEyTmprMExDSnVZbVlpT2pFM05UVTVNRFkyT1RRc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqSTVOakE0TlRnNE5TSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwyRmliM1YwTHlOdVltTm9kMk1pZlEudm81Qm1yamExYVVVSXJLamd4OWlwSGVUY2ZBUzZJcDNCZnRPclZnbTdZaz9lPW1lbG9uMDQwMSU0MG91dGxvb2suY29tJl9fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9._a0rwPofUbwyYmFHIjj3pVpQG__QIvqrcMMw9ortShU" target="_blank" rel="noopener noreferrer">NBC-HWC</a>、
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56VTFPVEEyTnpBekxDSnVZbVlpT2pFM05UVTVNRFkzTURNc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqZ3pORGd3TWpZM015SXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwyRmliM1YwTHlOalkzTm9JbjAuZUZSN0c3ZzVxel9Sd2YyeGZlZHhfaUN2WnBkZXFIVmNzRTR4VzFGb3Q3dz9lPW1lbG9uMDQwMSU0MG91dGxvb2suY29tJl9fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9.kyZ8aK_mhoe8nVTwsx98qbQiTOHBhJJIFS2buP9HbiY" target="_blank" rel="noopener noreferrer">CCSH</a>、
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56VTFPVEEyTnpFekxDSnVZbVlpT2pFM05UVTVNRFkzTVRNc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqUXhOVGd3TWpJeE1TSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwyRmliM1YwTHlOamFHVnpJbjAuYzJrU2loeEtZQWdreXBUMTVYczBaZXpXYVJxNEJfWDJ3RUdpSDhCai1tST9lPW1lbG9uMDQwMSU0MG91dGxvb2suY29tJl9fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9.9AUEJZ6hKHGx2WO5QNVD_D_UpPuyctou5bXjTCYxv-g" target="_blank" rel="noopener noreferrer">CHES®</a>
+      </p>
+      <p>
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2luc29tbmlhY29hY2guY29tP19fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9.IUD49mavwm48D12IChrKiZ6S555oXvxD31VNiPNBung" target="_blank" rel="noopener noreferrer">访问 Insomnia Coach 官网</a>
+      </p>
+
+      <h3>进一步阅读</h3>
+      <p>
+        想看看常见的“功能失调型睡眠想法”，以及其中有多少与你相似，可以阅读
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56Y3dOamMxT1RBeExDSnVZbVlpT2pFM056QTJOelU1TURFc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqWTBOalF6TnpZek55SXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwzTXpMWFZ6TFhkbGMzUXRNaTVoYldGNmIyNWhkM011WTI5dEwybHVjMjl0Ym1saExXTnZZV05vTDJSaVlYTXVjR1JtSW4wLmQ0MkZZZXlPb3E1U0pQR2xYdFl3c0ViZmllbndrcVozWUljRkNta2x0YWc_ZT1tZWxvbjA0MDElNDBvdXRsb29rLmNvbSZfX3M9ZXo4eG4yN3FoZmVzYWl5MWJ4ZzQifQ.ti0u-zxVz9wmlfagpN8I5rA_nr73XbBHb8jc9cv8XDM" target="_blank" rel="noopener noreferrer">
+          《Dysfunctional Beliefs About Sleep》量表 PDF
+        </a>。
+        页面加载后，需要向下滚动到第二页，才能看到实际的条目列表。
+      </p>
+
+      <h3>还有五种我可以帮助你的方式</h3>
+      <ol class="resource-list">
+        <li>
+          <strong>和我聊聊。</strong>
+          直接回复原邮件，告诉我你希望从这些邮件中获得什么。
+        </li>
+        <li>
+          <strong>参加更系统的辅导。</strong>
+          这些睡眠训练邮件会继续免费提供。如果你希望获得更有结构的支持，可以
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56YzBPVGt6T0RNeExDSnVZbVlpT2pFM056UTVPVE00TXpFc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqVTJPREl4TmpJd05DSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwyVnVjbTlzYkM4aWZRLl95RzRkMDFST1pFYTlOSndIejVQOU5wQlRTY1BSVFRUbE4xUmlTODB4UDQ_ZT1tZWxvbjA0MDElNDBvdXRsb29rLmNvbSZfX3M9ZXo4eG4yN3FoZmVzYWl5MWJ4ZzQifQ.Sds9GLLtXQ6FL-0ClUNyeLu2xC4tmou6NBqX8XpevSI" target="_blank" rel="noopener noreferrer">了解在线失眠辅导课程</a>；
+          如果更希望单独接受一对一帮助，也可以查看
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56YzBPVGt6TnpnMUxDSnVZbVlpT2pFM056UTVPVE0zT0RVc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqVXhOall6TlRNMk1DSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwzQm9iMjVsTHlKOS4yNDZhV3plSWJnZ3VweTVpRmRpZVV4UVIyaWtPMmhFMFhreXdBTmRRV2ZjP2U9bWVsb24wNDAxJTQwb3V0bG9vay5jb20mX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.QBhDfcFv9pVeBdzpBz8Sbxv1mw_KnIFDnTOKEZ4IF0g" target="_blank" rel="noopener noreferrer">为期三个月的 Insomnia Mastery 项目</a>。
+        </li>
+        <li>
+          <strong>加入论坛。</strong>
+          Insomnia Coach 论坛中有许多免费的支持与建议，你可以
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56ZzBNVEUxTURZNUxDSnVZbVlpT2pFM09EUXhNVFV3Tmprc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqZzFNVGN4TkRVd09TSXNJblZ5YkNJNkltaDBkSEJ6T2k4dmFXNXpiMjF1YVdGamIyRmphQzVqYjIwdmFtOXBiaTFtYjNKMWJTOF9aVzFoYVd3OWJXVnNiMjR3TkRBeEpUUXdiM1YwYkc5dmF5NWpiMjBtWm01aGJXVTlTblZoYmlac2JtRnRaVDBpZlEuazV2VzVPMWh1QlZ4bGJHZHV4clJ3VFFsaHFsQUF3ZEtiZ25URHlqdFdYWT9lPW1lbG9uMDQwMSU0MG91dGxvb2suY29tJl9fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9.u4rsBUL4Em2n82I84U2k6aKZZszpkFsICrWkHzVsZhw" target="_blank" rel="noopener noreferrer">免费注册</a>。
+        </li>
+        <li>
+          <strong>关注社交媒体。</strong>
+          我会在
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56Y3dOamMxTkRVd0xDSnVZbVlpT2pFM056QTJOelUwTlRBc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqRTNNVEUzTmpNeUlpd2laSGx1WVcxcFkxOTFjbXdpT201MWJHd3NJblZ5YkNJNkltaDBkSEJ6T2k4dmQzZDNMbWx1YzNSaFozSmhiUzVqYjIwdmJYbHBibk52Ylc1cFlXTnZZV05vTHlKOS5uU29GbzNEREdKV1ZKLXBjQ0ZhaVZfbGtVRGJ6aGlNVEZRSk1nNF9FWXJZP2U9bWVsb24wNDAxJTQwb3V0bG9vay5jb20mX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.2K0B2XFnN5a4ey6qRhjS7D6vKvAp--HAfqf9EDlx2v8" target="_blank" rel="noopener noreferrer">Instagram</a>、
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56Y3dOamMxTnpReExDSnVZbVlpT2pFM056QTJOelUzTkRFc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqazNOelkwTmprME1pSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwzZDNkeTU1YjNWMGRXSmxMbU52YlM5amFHRnVibVZzTDFWRFREVk1jMHhWWlZaQk1tcGZWbk5zTlRZeU5YTm9VU0o5LllUd0FKSjZZemx4NG5aMms3aTZqZTVIZ1VLZjAyemw3WVlYdFpGWlF3S28_ZT1tZWxvbjA0MDElNDBvdXRsb29rLmNvbSZfX3M9ZXo4eG4yN3FoZmVzYWl5MWJ4ZzQifQ.fhh0e8o-yPxL90-3pOMrteE1M9UUWwL8SBHXYyYx6mg" target="_blank" rel="noopener noreferrer">YouTube</a>
+          和
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56Y3dOamMxTlRrNExDSnVZbVlpT2pFM056QTJOelUxT1Rnc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqSTBPVFl6T0RFeU55SXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwzZDNkeTVzYVc1clpXUnBiaTVqYjIwdmFXNHZiWEpsWldSdEx5SjkuemZiOG5sWVRiQWN0S19ZblNIVFBaMndEa0V4WDhfcThpVUJiSVA5WjJtcz9lPW1lbG9uMDQwMSU0MG91dGxvb2suY29tJl9fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9.4X-q1WtAJiYZCEeGa348yEzSuw-XQuJGvSgW-LTeYAk" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          分享更多睡眠技巧与建议。
+        </li>
+        <li>
+          <strong>收听播客。</strong>
+          在
+          <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL2RyaXAubGEvYy9leUpoYkdjaU9pSklVekkxTmlKOS5leUpoZFdRaU9pSmtaWFJ2ZFhJaUxDSnBjM01pT2lKdGIyNXZiR2wwYUNJc0luTjFZaUk2SW1SbGRHOTFjbDlzYVc1cklpd2lhV0YwSWpveE56Y3dOamMxTkRjMUxDSnVZbVlpT2pFM056QTJOelUwTnpVc0ltRmpZMjkxYm5SZmFXUWlPaUkwTVRnM016RTBJaXdpZEhKcFoyZGxjbDlwWkNJNklqTTNPRGc1TURReU5pSXNJbVI1Ym1GdGFXTmZkWEpzSWpwdWRXeHNMQ0oxY213aU9pSm9kSFJ3Y3pvdkwybHVjMjl0Ym1saFkyOWhZMmd1WTI5dEwzQnZaR05oYzNRdkluMC4wcXhnN1Y3bmROYlVZZ0s5TUUwWTNaTzJRenFHWUNhLW1xY1FxN0hmWGhNP2U9bWVsb24wNDAxJTQwb3V0bG9vay5jb20mX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.8D5WQn9JIE7ZxydJojVqwouOfYkLAGCJvE8gDCgfH1E" target="_blank" rel="noopener noreferrer">Insomnia Coach® Podcast</a>
+          中，我会和曾经深受失眠困扰、如今已经恢复良好睡眠的人交谈。
+        </li>
+      </ol>
+    </section>
+
+    <section id="disclaimer">
+      <h2>免责声明</h2>
+      <div class="disclaimer">
+        本邮件内容仅用于信息和教育目的，不构成医疗建议，也不用于诊断、治疗、治愈或预防任何疾病、障碍或医学状况。它不能替代医生或其他持证医疗专业人员提供的建议。Insomnia Coach LLC 仅提供辅导服务，不提供心理治疗、咨询、医疗建议或医疗治疗。所有内容均按“现状”提供，不附带任何明示或暗示的保证。
+      </div>
+      <p>
+        为确保继续收到邮件，请将 martin@insomniacoach.com 添加到通讯录、安全发件人名单或白名单。
+      </p>
+      <p>
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL3d3dy5nZXRkcmlwLmNvbS9zdWJzY3JpYmVycy9lejh4bjI3cWhmZXNhaXkxYnhnNC90b3BpY3M_ZD13Z2E4OWRnOGJldnhldDh2ZXpyNSZleGNsdWRlX2NsaWNrPTEmX19zPWV6OHhuMjdxaGZlc2FpeTFieGc0In0.oEdiHvY7QbH7kCqAgfgq8WZxMazzt2zZXaKxCCxW6_0" target="_blank" rel="noopener noreferrer">退订邮件</a>
+        ·
+        <a href="https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzg0MTE1MDY5LCJuYmYiOjE3ODQxMTUwNjksImFjY291bnRfaWQiOiI0MTg3MzE0IiwiZGVsaXZlcnlfaWQiOiJ3Z2E4OWRnOGJldnhldDh2ZXpyNSIsInRva2VuIjoid2dhODlkZzhiZXZ4ZXQ4dmV6cjUiLCJzZW5kX2F0IjoxNzg0MTIyNjIwLCJlbWFpbF9pZCI6NTM1ODQwOSwiZW1haWxhYmxlX3R5cGUiOiJDYW1wYWlnbiIsImVtYWlsYWJsZV9pZCI6NDM5MDkwLCJ1cmwiOiJodHRwczovL3d3dy5nZXRkcmlwLmNvbS9zdWJzY3JpYmVycy9lejh4bjI3cWhmZXNhaXkxYnhnNC90b3BpY3M_ZXhjbHVkZV9jbGljaz0xJl9fcz1lejh4bjI3cWhmZXNhaXkxYnhnNCJ9.4dCxIA8m4I7QFuZzfSxaoN9YgP0Te7jdFIxtCSddzXU" target="_blank" rel="noopener noreferrer">管理订阅</a>
+      </p>
+      <p>通讯地址：Martin Reed, PO Box 488, Cottage Grove, OR 97424。</p>
+    </section>
+
+    <div class="footer">
+      本页面根据用户提供的英文 PDF 翻译并整理为中文 Wiki 风格页面。PDF 中的 16 个可点击链接已全部保留。
+    </div>
+  </main>
+</div>
+</body>
+</html>
