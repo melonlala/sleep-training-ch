@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>什么是“正常睡眠”？</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --paper: #ffffff;
+    --text: #202122;
+    --muted: #54595d;
+    --border: #a2a9b1;
+    --link: #36c;
+    --accent: #3366cc;
+    --note: #eef3f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.75;
+  }
+  .layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px 22px 56px;
+  }
+  aside {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    background: var(--paper);
+    border: 1px solid #c8ccd1;
+    padding: 18px;
+    font-size: 14px;
+  }
+  aside h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 8px;
+  }
+  aside a {
+    display: block;
+    color: var(--link);
+    text-decoration: none;
+    padding: 4px 0;
+  }
+  aside a:hover { text-decoration: underline; }
+  main {
+    background: var(--paper);
+    border: 1px solid #c8ccd1;
+    padding: 34px 44px 46px;
+    min-width: 0;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    margin-top: 34px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-top: 26px;
+  }
+  a { color: var(--link); }
+  .lead { font-size: 18px; }
+  .note {
+    background: var(--note);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin: 20px 0;
+  }
+  .takeaways {
+    background: #f0f7ed;
+    border: 1px solid #9fbd8f;
+    padding: 16px 20px;
+  }
+  .takeaways li { margin-bottom: 10px; }
+  .footer {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #eaecf0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  @media (max-width: 820px) {
+    .layout { grid-template-columns: 1fr; padding: 0; }
+    aside { position: static; border-left: 0; border-right: 0; }
+    main { border-left: 0; border-right: 0; padding: 26px 22px 40px; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <h2>目录</h2>
+    <a href="#overview">概述</a>
+    <a href="#why-education">为什么需要了解睡眠</a>
+    <a href="#how-sleep-works">睡眠如何运作</a>
+    <a href="#nrem">非快速眼动睡眠</a>
+    <a href="#rem">快速眼动睡眠</a>
+    <a href="#meaning">这些知识意味着什么</a>
+  </aside>
+
+  <main>
+    <p style="margin:0 0 18px;">
+      <a href="../day2.html">← 返回第 2 天</a>
+    </p>
+
+    <h1>什么是“正常睡眠”？</h1>
+    <div class="subtitle">
+      译自 HealthCentral 文章《What is “Normal” Sleep?》；作者 Martin Reed；原文更新于 2019 年 1 月 4 日。
+    </div>
+
+    <section id="overview">
+      <h2>概述</h2>
+      <p class="lead">
+        许多失眠者对睡眠存在一些根本性的误解。比如，有人认为所有成年人都必须睡满八小时才算健康，或者认为只要中途醒来，就会错过深度睡眠带来的全部好处。
+      </p>
+      <p>
+        实际上，成年人所需睡眠时间存在很大的个体差异，五到十小时都可能是合理范围。夜间醒来本身也并不意味着深度睡眠被完全破坏。
+      </p>
+    </section>
+
+    <section id="why-education">
+      <h2>为什么需要了解睡眠</h2>
+      <p>
+        对本来睡得不错的人来说，这些误解通常不会造成太大问题。但如果你正在经历睡眠困难，不准确的睡眠观念就可能增加焦虑、担忧和挫败感。
+      </p>
+      <p>
+        这些情绪会激活唤醒系统，使睡眠变得更加困难。因此，睡眠教育是失眠认知行为疗法中的重要组成部分，它可以帮助纠正那些会增加焦虑、加重失眠的错误想法。
+      </p>
+      <div class="note">
+        当你对正常睡眠有更准确的理解后，就不再需要用不现实、也没有帮助的标准要求自己。
+      </div>
+    </section>
+
+    <section id="how-sleep-works">
+      <h2>睡眠如何运作</h2>
+      <p>
+        睡眠主要分为两种状态：
+      </p>
+      <ul>
+        <li>快速眼动睡眠（REM）；</li>
+        <li>非快速眼动睡眠（NREM）。</li>
+      </ul>
+      <p>
+        一般来说，成年人整夜大约有 75% 的睡眠时间处于 NREM 睡眠，约 25% 处于 REM 睡眠。
+      </p>
+      <p>
+        睡眠通常从一段安静清醒开始，这段时间最长可能接近半小时。真正入睡后，我们通常先进入 NREM 睡眠，然后进入 REM 睡眠。
+      </p>
+    </section>
+
+    <section id="nrem">
+      <h2>非快速眼动睡眠（NREM）</h2>
+
+      <h3>第一阶段：N1</h3>
+      <p>
+        N1 是最浅的睡眠阶段，约占总睡眠时间的 5%。在这个阶段很容易被唤醒。事实上，如果你在 N1 阶段醒来，甚至可能不觉得自己刚才睡着了。
+      </p>
+      <p>
+        入睡抽动通常出现在即将入睡的安静清醒阶段，或 N1 睡眠中。
+      </p>
+
+      <h3>第二阶段：N2</h3>
+      <p>
+        N1 会帮助身体进入更深的 N2 睡眠。N2 大约占总睡眠时间的一半。
+      </p>
+      <p>
+        如果你在 N2 阶段醒来，相比在 N1 阶段醒来，你更可能明确感觉到自己刚才是在睡觉。
+      </p>
+
+      <h3>第三阶段：N3</h3>
+      <p>
+        在 N2 之后，我们会进入 N3。N3 大约占总睡眠时间的五分之一，不过老年人的比例通常会更低。
+      </p>
+      <p>
+        N3 是最深的睡眠阶段，因为处于这一阶段的人通常很难被叫醒。在经历睡眠不足后，身体往往会优先增加 N3 睡眠。
+      </p>
+      <p>
+        完成 N1、N2 和 N3 后，睡眠会反向经过较浅阶段，随后进入 REM 睡眠。
+      </p>
+    </section>
+
+    <section id="rem">
+      <h2>快速眼动睡眠（REM）</h2>
+      <p>
+        从脑电活动来看，REM 睡眠与安静清醒状态反而比较相似，因为在这一阶段，大脑的活跃程度高于任何 NREM 阶段。
+      </p>
+      <p>
+        大多数梦境出现在 REM 睡眠中。如果我们在这一阶段突然醒来，也最容易经历睡眠瘫痪。
+      </p>
+      <p>
+        REM 结束后，我们会重新进入 NREM 睡眠并开始新的周期，不过每次并不一定严格按照完全相同的顺序经过所有 NREM 阶段。
+      </p>
+      <p>
+        随着夜晚推进，深睡眠阶段，尤其是 N3，所占时间会逐渐缩短；REM 睡眠所占时间则会越来越长。
+      </p>
+    </section>
+
+    <section id="meaning">
+      <h2>这些知识意味着什么</h2>
+      <div class="takeaways">
+        <ul>
+          <li>我们一整夜会反复经历多个不同的睡眠阶段。</li>
+          <li>你实际获得的睡眠可能比自己意识到的更多，因为从浅睡眠醒来时，你甚至可能不知道自己睡着过。</li>
+          <li>大部分深度睡眠发生在夜晚前半段。因此，即使只睡了几个小时，你也可能已经获得了大部分、甚至全部深度睡眠。</li>
+          <li>睡眠不足后，身体通常会优先补充深度睡眠。</li>
+          <li>REM 睡眠也可能更早出现，并持续更长时间。</li>
+          <li>夜晚后半段通常包含更多 REM 睡眠和更少深睡眠，因此醒来会更加常见，而这是正常现象。</li>
+          <li>越接近睡眠结束，REM 时段越长，因此梦或噩梦更容易把你唤醒。</li>
+        </ul>
+      </div>
+      <p>
+        了解这些知识后，你也可以把它们分享给身边的人，帮助他们理解失眠者的真实体验，避免继续传播没有帮助、甚至不准确的建议。
+      </p>
+    </section>
+
+    <div class="footer">
+      本页面根据用户提供的文章内容翻译并整理为中文 Wiki 风格页面。原文最初发表于 2014 年 6 月 4 日，最近一次更新于 2019 年 1 月 4 日。
+    </div>
+  </main>
+</div>
+</body>
+</html>
